@@ -1,0 +1,22 @@
+.top-bar{
+    background-color:#FAF8F5;
+     
+}
+.tb-mid p{
+    color: rgb(169, 167, 167);
+}
+
+a{
+    color: rgb(82, 80, 80);
+}
+
+
+
+.tb-end i{
+    color: rgb(82, 80, 80); 
+    padding: 10px;
+}
+
+.Li-one{
+    color:#3BB77E ;
+}

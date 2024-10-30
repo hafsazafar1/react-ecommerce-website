@@ -1,0 +1,17 @@
+.search-bar input{
+    width: 465px;
+    padding: 10px 20px;
+    border-radius: 22px;
+   border: 1px solid #3BB77E;
+}
+.icons i{
+    font-size: 30px;
+  padding-right: 10px;
+}
+.search-bar i{
+    position: relative;
+    right: 43px;
+    color: rgb(206, 202, 202);
+    font-size: 20px;
+}
+

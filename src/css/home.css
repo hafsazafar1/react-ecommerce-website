@@ -1,0 +1,39 @@
+.slide-1 {
+  background-image: url("https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-1.png");
+  padding: 80px 60px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide-2 {
+  background-image: url("https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-2.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 60px;
+}
+.slide-1 h1,.slide-2 h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+.slide-1 p ,.slide-2 p{
+  font-size: 30px;
+  color: rgb(121, 119, 119);
+  padding: 30px 0;
+}
+.slide-1 input,.slide-2 input{
+    width: 400px;
+    padding: 10px 17px;
+    border-radius: 50px;
+    border: 1px;
+}
+.slide-1 button ,.slide-2 button{
+  
+    padding: 14px 30px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #29A56C;
+    border: none;
+    position: relative;
+    right: 110px;
+}
