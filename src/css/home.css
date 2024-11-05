@@ -144,3 +144,18 @@ padding: 15px 5px;
   margin: 5px 20px ;
   margin-bottom: 0px;
 }
+
+.popular-products button{
+  position: relative;
+    display: inline-block;
+    padding: 6px 20px 6px 20px;
+    border-radius: 4px;
+    color: #29A56C;
+    background-color: #DEF9EC;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+}
+.popular-products .price{
+  color: #29A56C;
+}

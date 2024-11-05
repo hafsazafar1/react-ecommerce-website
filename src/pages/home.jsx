@@ -59,7 +59,7 @@ export default function Home() {
           <h6>Cake & Milk</h6>
           <p>26 items</p>
         </SwiperSlide>
-        
+
         <SwiperSlide className="card-2">
           <img
             src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-12.png"
@@ -175,6 +175,131 @@ export default function Home() {
                     Everyday Fresh & <br /> Clean With Our <br /> Products
                   </h3>
                   <button>shop now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="popular-products py-5">
+        <div className="container-fluid">
+          <div className="title py-4">
+            <h3 >Popular Products</h3>
+          </div>
+          <div className="row">
+            <div className="col-3">
+              <div className="card">
+                <div className="card-img text-center">
+                <img
+                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-1.jpg"
+                  className=""
+                  alt="..."
+                  width="200"
+                  height="200"
+                ></img>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">
+                    Seeds of Change Organic Quinoa, Brown, & Red Rice
+                  </h5>
+                  <div className="d-flex gap-5 align-items-center py-3">
+                    <div className="text">
+                      <b className="price"> $28.85 </b> $32.8
+                    </div>
+                    <div className="button">
+                      <button>
+                        
+                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="card">
+                <div className="card-img text-center">
+                <img
+                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-1.jpg"
+                  className=""
+                  alt="..."
+                  width="200"
+                  height="200"
+                ></img>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">
+                  All Natural Italian-Style Chicken Meatballs
+                  </h5>
+                  <div className="d-flex gap-5 align-items-center py-3">
+                    <div className="text">
+                      <b className="price">$52.85 $55.8</b> 
+                    </div>
+                    <div className="button">
+                      <button>
+                        
+                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="card">
+                <div className="card-img text-center">
+                <img
+                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-3-2.jpg"
+                  className=""
+                  alt="..."
+                  width="200"
+                  height="200"
+                ></img>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">
+                  Angie’s Boomchickapop Sweet & Salty Kettle Corn
+                  </h5>
+                  <div className="d-flex gap-5 align-items-center py-3">
+                    <div className="text">
+                      <b className="price"> $28.85 </b> $32.8
+                    </div>
+                    <div className="button">
+                      <button>
+                        
+                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="card">
+                <div className="card-img text-center">
+                <img
+                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-4-2.jpg"
+                  className=""
+                  alt="..."
+                  width="200"
+                  height="200"
+                ></img>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">
+                  Foster Farms Takeout Crispy Classic Buffalo Wings
+                  </h5>
+                  <div className="d-flex gap-5 align-items-center py-3">
+                    <div className="text">
+                      <b className="price"> $28.85 </b> $32.8
+                    </div>
+                    <div className="button">
+                      <button>
+                        
+                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
