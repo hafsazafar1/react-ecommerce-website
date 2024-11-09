@@ -5,7 +5,19 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../css/home.css";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+const client = axios.create({
+  baseURL: "https://fakestoreapi.com",
+});
 export default function Home() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    client.get("/products").then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
+
   return (
     <>
       <Topbar />
@@ -184,125 +196,41 @@ export default function Home() {
       <div className="popular-products py-5">
         <div className="container-fluid">
           <div className="title py-4">
-            <h3 >Popular Products</h3>
+            <h3>Popular Products</h3>
           </div>
           <div className="row">
-            <div className="col-3">
-              <div className="card">
-                <div className="card-img text-center">
-                <img
-                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-1.jpg"
-                  className=""
-                  alt="..."
-                  width="200"
-                  height="200"
-                ></img>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Seeds of Change Organic Quinoa, Brown, & Red Rice
-                  </h5>
-                  <div className="d-flex gap-5 align-items-center py-3">
-                    <div className="text">
-                      <b className="price"> $28.85 </b> $32.8
-                    </div>
-                    <div className="button">
-                      <button>
-                        
-                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
-                      </button>
+            {products.map((product, index) => (
+              <div className="col-3 mb-4" key={index}>
+                <div className="card">
+                  <div className="card-img text-center">
+                    <img
+                      className="p-3 py-4"
+                      src={product.image}
+                      alt={product.title}
+                      width="200"
+                      height="200"
+                    />
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      {product.title.slice(0, 30)}...
+                    </h5>
+                    <div className="d-flex gap-5 align-items-center py-3">
+                      <div className="text">
+                        <b className="price"> {product.price} </b>{" "}
+                        {product.originalPrice}
+                      </div>
+                      <div className="button">
+                        <button>
+                          <i className="fa-solid fa-cart-shopping"></i> &nbsp;
+                          ADD
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-3">
-              <div className="card">
-                <div className="card-img text-center">
-                <img
-                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-1.jpg"
-                  className=""
-                  alt="..."
-                  width="200"
-                  height="200"
-                ></img>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">
-                  All Natural Italian-Style Chicken Meatballs
-                  </h5>
-                  <div className="d-flex gap-5 align-items-center py-3">
-                    <div className="text">
-                      <b className="price">$52.85 $55.8</b> 
-                    </div>
-                    <div className="button">
-                      <button>
-                        
-                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-3">
-              <div className="card">
-                <div className="card-img text-center">
-                <img
-                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-3-2.jpg"
-                  className=""
-                  alt="..."
-                  width="200"
-                  height="200"
-                ></img>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">
-                  Angie’s Boomchickapop Sweet & Salty Kettle Corn
-                  </h5>
-                  <div className="d-flex gap-5 align-items-center py-3">
-                    <div className="text">
-                      <b className="price"> $28.85 </b> $32.8
-                    </div>
-                    <div className="button">
-                      <button>
-                        
-                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-3">
-              <div className="card">
-                <div className="card-img text-center">
-                <img
-                  src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-4-2.jpg"
-                  className=""
-                  alt="..."
-                  width="200"
-                  height="200"
-                ></img>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">
-                  Foster Farms Takeout Crispy Classic Buffalo Wings
-                  </h5>
-                  <div className="d-flex gap-5 align-items-center py-3">
-                    <div className="text">
-                      <b className="price"> $28.85 </b> $32.8
-                    </div>
-                    <div className="button">
-                      <button>
-                        
-                        <i class="fa-solid fa-cart-shopping"></i> &nbsp;  ADD
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
