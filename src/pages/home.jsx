@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "../css/home.css";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 const client = axios.create({
   baseURL: "https://fakestoreapi.com",
 });
@@ -112,7 +114,7 @@ export default function Home() {
           <img
             src="https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-1.png"
             width="90"
-            hight="100px"
+            hight="100px"    
           ></img>
           <h6>Vegetable</h6>
           <p>72 items</p>
@@ -201,6 +203,8 @@ export default function Home() {
           <div className="row">
             {products.map((product, index) => (
               <div className="col-3 mb-4" key={index}>
+                <Link to={`/product/${product.id}`}>
+
                 <div className="card">
                   <div className="card-img text-center">
                     <img
@@ -229,6 +233,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                </Link>
               </div>
             ))}
           </div>
